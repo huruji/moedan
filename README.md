@@ -1,3 +1,7 @@
+<p align="center">
+<img width="60%" src="./logo.png" alt="saso">
+</p>
+
 # moedan
 简单实用的弹幕引擎
 
