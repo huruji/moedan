@@ -4,7 +4,7 @@
   "description": "A simple danmaku engine",
   "main": "index.js",
   "scripts": {
-    "build": "microbundle build --entry src/preloader.js --output dist/preloader.js",
+    "build": "microbundle build --entry index.ts --output dist/Moedan.js",
     "release": "standard-version && git push --follow-tags origin master && npm publish",
     "release:first": "standard-version --first-release && git push --follow-tags origin master && npm publish",
     "release:major": "standard-version --release-as major && git push --follow-tags origin master && npm publish",
