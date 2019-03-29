@@ -35,5 +35,8 @@
     "eslint-plugin-react": "^7.12.4",
     "microbundle": "^0.11.0",
     "standard-version": "^5.0.2"
-  }
+  },
+  "files":[
+    "dist"
+  ]
 }
