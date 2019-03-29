@@ -1,2 +1,6 @@
 # moedan
-A simple danmaku engine
+简单实用的弹幕引擎
+
+## How to use
+
+

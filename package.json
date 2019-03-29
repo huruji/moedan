@@ -1,0 +1,35 @@
+{
+  "name": "moedan",
+  "version": "1.0.0",
+  "description": "A simple danmaku engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "microbundle build --entry src/preloader.js --output dist/preloader.js",
+    "release": "standard-version && git push --follow-tags origin master && npm publish",
+    "release:first": "standard-version --first-release && git push --follow-tags origin master && npm publish",
+    "release:major": "standard-version --release-as major && git push --follow-tags origin master && npm publish",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master && npm publish",
+    "release:patch": "standard-version --release-as patch && git push --follow-tags origin master && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huruji/moedan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huruji/moedan/issues"
+  },
+  "homepage": "https://github.com/huruji/moedan#readme",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^1.5.0",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "microbundle": "^0.11.0",
+    "standard-version": "^5.0.2"
+  }
+}
