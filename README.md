@@ -5,7 +5,7 @@
 # moedan
 简单、小巧、实用的弹幕引擎
 
-![](./use.gif)
+![](./example.gif)
 ## How to use
 ```bash
 npm i moedan -S
