@@ -2,7 +2,11 @@
   "name": "moedan",
   "version": "1.0.0",
   "description": "A simple danmaku engine",
-  "main": "index.js",
+  "main": "dist/Moedan.js",
+  "umd:main": "dist/Moedan.umd.js",
+  "module": "dist/Moedan.mjs",
+  "source": "index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "microbundle build --entry index.ts --output dist/Moedan.js",
     "release": "standard-version && git push --follow-tags origin master && npm publish",
