@@ -1,6 +1,6 @@
 {
   "name": "moedan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple danmaku engine",
   "main": "dist/Moedan.js",
   "umd:main": "dist/Moedan.umd.js",
@@ -36,7 +36,7 @@
     "microbundle": "^0.11.0",
     "standard-version": "^5.0.2"
   },
-  "files":[
+  "files": [
     "dist"
   ]
 }
