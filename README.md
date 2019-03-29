@@ -3,8 +3,9 @@
 </p>
 
 # moedan
-简单实用的弹幕引擎
+简单、小巧、实用的弹幕引擎
 
+![](./example.gif)
 ## How to use
 ```bash
 npm i moedan -S
