@@ -1,5 +1,5 @@
 <p align="center">
-<img width="60%" src="./logo.png" alt="saso">
+<img width="70%" src="./logo.png" alt="saso">
 </p>
 
 # moedan
