@@ -1,11 +1,11 @@
-interface DanmakuData {
+export interface DanmakuData {
   content?: string,
   time?: number,
   height?: number,
   [key: string]: any
 }
 
-interface Options {
+export interface Options {
   data?: DanmakuData,
   container?: HTMLElement,
   player: HTMLVideoElement,
@@ -16,7 +16,7 @@ interface Options {
   height?: number
 }
 
-class Danmaku {
+export default class Danmaku {
   opts: Options
   data: DanmakuData
   container: HTMLElement
@@ -196,4 +196,3 @@ class Danmaku {
   }
 }
 
-export default Danmaku
