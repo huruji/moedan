@@ -1,6 +1,6 @@
 {
   "name": "moedan",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A simple danmaku engine",
   "main": "dist/Moedan.js",
   "umd:main": "dist/Moedan.umd.js",
