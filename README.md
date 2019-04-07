@@ -13,6 +13,7 @@ npm i moedan -S
 
 ```js
 import Moedan from 'moedan'
+import './moedan/dist/Moedan.css'
 
 const danmakuDada = [
   {
