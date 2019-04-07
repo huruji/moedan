@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0](https://github.com/huruji/moedan/compare/v1.0.1...v1.1.0) (2019-04-07)
+
+
+### Bug Fixes
+
+* :bug: :memo: img alt ([05004a8](https://github.com/huruji/moedan/commit/05004a8))
+* :bug: example ([3439058](https://github.com/huruji/moedan/commit/3439058))
+
+
+### Features
+
+* export interface ([30a4338](https://github.com/huruji/moedan/commit/30a4338))
+
+
+
 ## [1.0.1](https://github.com/huruji/moedan/compare/v1.0.0...v1.0.1) (2019-03-29)
 
 
