@@ -7,7 +7,7 @@ export interface DanmakuData {
 
 export interface Options {
   data?: DanmakuData,
-  container?: HTMLElement,
+  container: HTMLElement,
   player: HTMLVideoElement,
   tunnels?: number,
   time?: number,
@@ -40,11 +40,10 @@ export default class Danmaku {
     this.danShowTime = opts.time || 6
     this.danWidth = opts.danWidth || opts.container.offsetWidth
     this.paused = false
-    // this.show = true
     this.showing = true
-    // this.time = opts.time || 0
     this.initContext()
     this.start()
+    this.initEvents()
   }
 
   start() {
@@ -66,7 +65,9 @@ export default class Danmaku {
     if (this.data.length && !this.paused && this.showing) {
       let item = this.data[this.danIndex]
       const dan = []
-      while (item && this.player.currentTime >= parseFloat(item.barragetime)) {
+
+
+      while (item && this.player.currentTime >= parseFloat(item.time)) {
         dan.push(item)
         item = this.data[++this.danIndex]
       }
@@ -76,7 +77,6 @@ export default class Danmaku {
   }
 
   draw(dan) {
-    // const containerHeight = this.container.offsetHeight
     const containerWidth = this.danWidth
 
     const docFragment = document.createDocumentFragment()
@@ -193,6 +193,16 @@ export default class Danmaku {
 
   send(data, offset = 0) {
     this.data.splice(this.danIndex + offset, 0, data)
+  }
+
+  initEvents() {
+    this.player.addEventListener('play', () => this.play())
+
+    this.player.addEventListener('pause', () => this.pause())
+
+    this.player.addEventListener('ended', () => {
+      this.reload()
+    })
   }
 }
 

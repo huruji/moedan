@@ -1,0 +1,22 @@
+@keyframes moedan {
+  0% {
+    transform: translateX(100%);
+  }
+}
+.danmaku_item {
+  z-index: 999;
+  top: 15px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0 15px;
+  border-radius: 15px;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  will-change: transform;
+  display: inline-block;
+  animation: moedan 6s linear;
+}
