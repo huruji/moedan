@@ -1,8 +1,8 @@
 {
+  "parser": "@typescript-eslint/parser",
   "root": true,
-  "extends": "airbnb",
+  "extends": ["airbnb-typescript/base"],
   "env": {
-    "es6": true,
     "browser": true,
     "node": true,
     "jest": true
@@ -16,17 +16,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "comma-dangle": ["error", "only-multiline"],
-    "semi": 0,
-    "func-names": 0,
-    "eqeqeq": 0,
-    "no-plusplus": 0,
-    "prefer-destructuring": ["error", {
-      "array": false,
-      "object": false
-    }],
-    "no-param-reassign": ["error", {
-      "props": false
-    }]
+    "semi": [1, "never"],
+    "no-plusplus": 0
   }
 }

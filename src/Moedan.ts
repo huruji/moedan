@@ -18,17 +18,29 @@ export interface Options {
 
 export default class Danmaku {
   opts: Options
+
   data: DanmakuData
+
   container: HTMLElement
+
   player: HTMLVideoElement
+
   danIndex: number
+
   danmakuTunnelsNum: number
+
   danTunnel: any
+
   danShowTime: number
+
   danWidth: number
+
   paused: boolean
+
   showing: boolean
+
   context: CanvasRenderingContext2D
+
   constructor(opts: Options) {
     this.opts = opts
     this.data = opts.data || []
@@ -51,7 +63,7 @@ export default class Danmaku {
   }
 
   initContext() {
-    let font = this.opts.font
+    let { font } = this.opts
     if (!font) font = getComputedStyle(this.container).getPropertyValue('font')
     this.context = document.createElement('canvas').getContext('2d')
     this.context.font = font
@@ -63,8 +75,8 @@ export default class Danmaku {
 
   frame() {
     if (this.data.length && !this.paused && this.showing) {
-      let item = this.data[this.danIndex]
-      const dan = []
+      let item = this.data[this.danIndex];
+      const dan = [];
 
 
       while (item && this.player.currentTime >= parseFloat(item.time)) {
@@ -104,10 +116,8 @@ export default class Danmaku {
   getTunnel(ele, width) {
     const danSpeed = w => (this.danWidth + w) / 6
     const danItemRight = (e) => {
-      // eslint-disable-next-line
-			const eleWidth = e.offsetWidth || parseInt(getComputedStyle(e).width)
-      // eslint-disable-next-line
-			const eleRight = e.getBoundingClientRect().right || this.container.getBoundingClientRect().right
+      const eleRight = e.getBoundingClientRect().right
+                      || this.container.getBoundingClientRect().right
       return this.container.getBoundingClientRect().right - eleRight
     }
     for (let i = 0; i < this.danmakuTunnelsNum; i++) {
@@ -117,11 +127,8 @@ export default class Danmaku {
         const last = item[item.length - 1]
         const lastRight = danItemRight(last)
 
-        // eslint-disable-next-line
-				if (
-          lastRight > this.danWidth - tmp * danSpeed(parseInt(getComputedStyle(last).width))
-					&& lastRight > 0
-        ) {
+        if (lastRight > this.danWidth - tmp * danSpeed(parseInt(getComputedStyle(last).width, 10))
+        && lastRight > 0) {
           this.danTunnel[`${i}`].push(ele)
           ele.addEventListener('animationend', () => {
             this.danTunnel[`${i}`].splice(0, 1)
@@ -205,4 +212,3 @@ export default class Danmaku {
     })
   }
 }
-
